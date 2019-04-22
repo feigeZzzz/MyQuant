@@ -1,0 +1,23 @@
+from grpc import Channel
+from grpc._channel import _Rendezvous
+from typing import Tuple, Union
+
+from gm.pb.data_pb2 import (
+    Ticks, Bars
+)
+from gm.pb.history_pb2 import (
+    GetCurrentTicksReq, GetHistoryTicksReq, GetHistoryBarsReq, GetHistoryTicksNReq,
+    GetHistoryBarsNReq, GetBenchmarkReturnReq, GetBenchmarkReturnRsp
+)
+
+
+# 调用时加上 with_call 则会返回 GetBenchmarkReturnRsp, _Rendezvous 这样的元组
+class HistoryServiceStub:
+    def __init__(self, channel:Channel):...
+    def GetCurrentTicks(self, request: GetCurrentTicksReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[Ticks, Tuple[Ticks, _Rendezvous]] : ...
+    def GetHistoryTicks(self, request: GetHistoryTicksReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[Ticks, Tuple[Ticks, _Rendezvous]] : ...
+    def GetHistoryBars(self, request: GetHistoryBarsReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[Bars, Tuple[Bars, _Rendezvous]] : ...
+    def GetHistoryTicksN(self, request: GetHistoryTicksNReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[Ticks, Tuple[Ticks, _Rendezvous]] : ...
+    def GetHistoryBarsN(self, request: GetHistoryBarsNReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[Bars, Tuple[Bars, _Rendezvous]] : ...
+    def GetBenchmarkReturnReq(self, request: GetBenchmarkReturnReq, timeout=None, metadata=None, credentials=None, with_call=False) -> Union[GetBenchmarkReturnRsp, Tuple[GetBenchmarkReturnRsp, _Rendezvous]] : ...
+

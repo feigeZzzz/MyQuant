@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gm
+Version: 3.0.120
+Summary: 掘金量化 掘金3 sdk
+Home-page: http://myquant.cn/
+Author: myquant_dev
+Author-email: support@myquant.cn
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4
+Provides-Extra: pandas
+Requires-Dist: python-dateutil (>=2.7.3)
+Requires-Dist: arrow (>=0.12.1)
+Requires-Dist: grpcio (>=1.17.1)
+Requires-Dist: Cython (>=0.26.1)
+Requires-Dist: protobuf (>=3.6.0)
+Requires-Dist: pandas (>=0.23.0)
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == 'pandas'
+
+掘金量化 A股实盘量化 中国期货量化 程序化交易 仿真 中国量化第一 掘金3 sdk
+
+
